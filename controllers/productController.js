@@ -36,3 +36,9 @@ exports.postProduct = async (req, res) => {
   }
 
 }
+
+exports.getProducts = async(req,res) => {
+  const products = await Product.find({});
+  console.log(products)
+  res.render('products', {products})
+}
