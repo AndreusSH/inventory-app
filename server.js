@@ -37,8 +37,10 @@ app.use(express.urlencoded({ extended: true }))
 connectDB()
 
 //routes
-app.use('/', require('./routes/products'))
-app.use('/new', require('./routes/products'))
+app.use('/', require('./routes/products'));
+app.use('/new', require('./routes/products'));
+app.use('/products', require('./routes/products'))
+
 
 /*
 app.get('/api/products', async (req, res) => {
