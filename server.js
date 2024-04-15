@@ -2,9 +2,12 @@ const express = require('express')
 const path = require('path')
 const app = express();
 const flash = require('express-flash');
-const session = require('express-session')
-const port = process.env.PORT || 3000
-require('dotenv').config()
+const session = require('express-session');
+const bodyParser = require('body-parser');
+const port = process.env.PORT || 3000;
+require('dotenv').config();
+const multer  = require('multer')
+const upload = multer({ dest: 'uploads/' })
 
 app.use(express.json())
 // Serve static files from the public directory
